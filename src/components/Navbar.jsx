@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { ThemeContext } from "../context";
 
-const Navbar = () => {
-  const [theme, setTheme] = useState("light");
+const Navbar = ({ setTheme}) => {
+  const theme = useContext(ThemeContext);
+  const textColor = theme === "light" ? "#212121" : "#f8f8f8";
+  // console.log(theme)
 
   return (
     <div className="flex  justify-between items-center py-5 ">
@@ -17,10 +20,11 @@ const Navbar = () => {
           alt="logo"></img>
       )}
       <ul className="flex gap-x-6">
-        <li>HOME</li>
-        <li>PROJECTS</li>
-        <li>BLOG</li>
-        <li>CONTACT ME</li>
+        <li style={{color: textColor}}>HOME</li>
+        <li style={{color: textColor}}>PROJECTS</li>
+        <li style={{color: textColor}}>BLOG</li>
+        <li style={{color: textColor}}>CONTACT ME</li>
+        <li style={{color: textColor}} onClick={() => setTheme(theme === "light" ? "dark" : "light")}>Change Theme</li>
       </ul>
     </div>
   );
