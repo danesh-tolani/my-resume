@@ -1,53 +1,15 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../context";
 
-const Skills = () => {
-  const theme = useContext(ThemeContext);
-  const textColor = theme === "light" ? "#212121" : "#f8f8f8";
+const Projects = () => {
+
+    const theme = useContext(ThemeContext);
+    const textColor = theme === "light" ? "#212121" : "#f8f8f8";
 
   return (
-    <div className="py-20 border border-red-400">
-      <h2 className="h2 text-4xl font-medium mb-10" style={{color: textColor}}>Skills</h2>
-      <div className="grid grid-cols-3 gap-y-10 transition duration-700 ease-in-out">
-        <div className="flex items-center gap-x-5">
-          <svg
-            className={`cursor-pointer ${theme === "light" ? "fill-[#212121]" : "fill-[#f8f8f8]"} hover:fill-[#ff5722] transition duration-200 ease-in-out`}
-            width="50px"
-            height="50px">
-            <path d="M 45.273438 2.324219 C 45.085938 2.117188 44.816406 2 44.535156 2 L 5.464844 2 C 5.183594 2 4.914063 2.117188 4.726563 2.324219 C 4.535156 2.53125 4.441406 2.808594 4.46875 3.089844 L 7.988281 42.515625 C 8.023438 42.929688 8.3125 43.273438 8.710938 43.390625 L 24.722656 47.960938 C 24.808594 47.988281 24.902344 48 24.996094 48 C 25.089844 48 25.179688 47.988281 25.269531 47.960938 L 41.292969 43.390625 C 41.691406 43.273438 41.976563 42.929688 42.015625 42.515625 L 45.53125 3.089844 C 45.558594 2.808594 45.464844 2.53125 45.273438 2.324219 Z M 36.847656 15.917969 L 18.035156 15.917969 L 18.484375 21.007813 L 36.394531 21.007813 L 35.050781 36.050781 L 24.992188 39.089844 L 24.894531 39.058594 L 14.953125 36.046875 L 14.410156 29.917969 L 19.28125 29.917969 L 19.492188 32.296875 L 25.050781 33.460938 L 30.507813 32.296875 L 31.089844 25.859375 L 14.046875 25.859375 L 12.722656 11.054688 L 37.28125 11.054688 Z" />
-          </svg>
-          <p className="text-2xl font-light" style={{color: textColor}}>HTML 5</p>
-        </div>
-        <div className="flex items-center gap-x-5">
-          <svg
-             className={`cursor-pointer ${theme === "light" ? "fill-[#212121]" : "fill-[#f8f8f8]"} hover:fill-[#2795d5] transition duration-200 ease-in-out`}
-            width="50px"
-            height="50px">
-            <path
-              fill-rule="evenodd"
-              d="M 42 6 L 39 40 L 25 44 L 11 40 L 8 6 Z M 16.800781 28 L 20.800781 28 L 20.898438 30.5 L 25 31.898438 L 29.101563 30.5 L 29.398438 26 L 20.601563 26 L 20.398438 22 L 29.601563 22 L 29.898438 18 L 16.101563 18 L 15.800781 14 L 34.101563 14 L 33.601563 22 L 32.898438 33.5 L 25 36.101563 L 17.101563 33.5 Z"
-            />{" "}
-          </svg>
-          <p className="text-2xl font-light" style={{color: textColor}}>CSS 3</p>
-        </div>
-        <div className="flex items-center gap-x-5">
-          <svg
-             className={`cursor-pointer ${theme === "light" ? "fill-[#212121]" : "fill-[#f8f8f8]"} hover:fill-[#F1D120] transition duration-200 ease-in-out`}
-            width="50px"
-            height="50px">
-            <path d="M45.274,2.325C45.084,2.118,44.817,2,44.536,2H5.464C5.183,2,4.916,2.118,4.726,2.325S4.443,2.81,4.468,3.089l3.52,39.427 c0.037,0.412,0.324,0.759,0.722,0.873l16.01,4.573C24.809,47.987,24.902,48,24.994,48s0.185-0.013,0.274-0.038l16.024-4.573 c0.398-0.114,0.685-0.461,0.722-0.873l3.518-39.427C45.557,2.81,45.463,2.532,45.274,2.325z M12,29.004l7,1.942V11h4v26l-11-3.051 V29.004z M38.054,22L37,34.25L27,37v-4.601l6.75-1.855l0.25-3.75L27,28V11h12l-0.345,4H31v8L38.054,22z" />
-          </svg>
-          <p className="text-2xl font-light" style={{color: textColor}}>javaScript</p>
-        </div>
-        <div className="flex items-center gap-x-5">
-          <svg
-            className={`cursor-pointer ${theme === "light" ? "fill-[#212121]" : "fill-[#f8f8f8]"} hover:fill-[#06ADC9] transition duration-200 ease-in-out`}
-            width="50px"
-            height="50px">
-            <path d="M24,9.604c-6.4,0 -10.4,3.199 -12,9.597c2.4,-3.199 5.2,-4.398 8.4,-3.599c1.826,0.456 3.131,1.781 4.576,3.247c2.352,2.387 5.075,5.151 11.024,5.151c6.4,0 10.4,-3.199 12,-9.598c-2.4,3.199 -5.2,4.399 -8.4,3.6c-1.825,-0.456 -3.13,-1.781 -4.575,-3.247c-2.353,-2.388 -5.077,-5.151 -11.025,-5.151zM12,24c-6.4,0 -10.4,3.199 -12,9.598c2.4,-3.199 5.2,-4.399 8.4,-3.599c1.825,0.457 3.13,1.781 4.575,3.246c2.353,2.388 5.077,5.152 11.025,5.152c6.4,0 10.4,-3.199 12,-9.598c-2.4,3.199 -5.2,4.399 -8.4,3.599c-1.826,-0.456 -3.131,-1.781 -4.576,-3.246c-2.352,-2.388 -5.075,-5.152 -11.024,-5.152z"></path>
-          </svg>
-          <p className="text-2xl font-light" style={{color: textColor}}>Tailwind CSS</p>
-        </div>
+    <div className="py-20 border border-red-400" style={{ color: textColor }}>
+      <h2 className="h2 text-4xl font-medium mb-10">Projects</h2>
+      <div className="flex flex-col gap-y-5">
         <div className="flex items-center gap-x-5">
           <svg
             className={`cursor-pointer ${theme === "light" ? "fill-[#212121]" : "fill-[#f8f8f8]"} hover:fill-[#5CCFEE] transition duration-200 ease-in-out`}
@@ -59,37 +21,20 @@ const Skills = () => {
               fill-rule="evenodd"
             />
           </svg>
-          <p className="text-2xl font-light" style={{color: textColor}}>React</p>
+          <p className="text-2xl font-medium" style={{color: textColor}}>React Projects</p>
         </div>
         <div className="flex items-center gap-x-5">
           <svg
-            className={`cursor-pointer ${theme === "light" ? "fill-[#212121]" : "fill-[#f8f8f8]"} hover:fill-[#7046B2] transition duration-200 ease-in-out`}
+            className={`cursor-pointer ${theme === "light" ? "fill-[#212121]" : "fill-[#f8f8f8]"} hover:fill-[#06ADC9] transition duration-200 ease-in-out`}
             width="50px"
             height="50px">
-            <path d="M 24 2 C 16.832 2 11 10.292328 11 20.486328 C 11 25.752514 12.564938 30.494647 15.060547 33.859375 A 3.5 3.5 0 0 0 18.5 38 A 3.5 3.5 0 1 0 18.5 31 A 3.5 3.5 0 0 0 17.931641 31.050781 C 16.143565 28.387233 15 24.611465 15 20.486328 C 15 12.633328 19.122 6 24 6 C 28.119 6 31.689125 10.7375 32.703125 16.9375 C 34.125125 17.3455 35.541688 17.897453 36.929688 18.564453 C 36.251687 9.2704531 30.712 2 24 2 z M 22.5 17 A 3.5 3.5 0 1 0 22.5 24 A 3.5 3.5 0 0 0 25.640625 22.041016 C 28.890379 21.837485 32.64609 22.840116 36.113281 24.917969 C 42.973281 29.030969 46.703812 36.223047 44.257812 40.623047 C 43.453812 42.069047 42.005359 43.108953 40.068359 43.626953 C 37.279359 44.372953 33.859234 43.993672 30.490234 42.638672 C 29.421234 43.632672 28.245891 44.565828 26.962891 45.423828 C 30.290891 47.104828 33.8105 47.996094 37.0625 47.996094 C 38.4725 47.996094 39.833516 47.830234 41.103516 47.490234 C 44.110516 46.685234 46.410906 44.982406 47.753906 42.566406 C 51.337906 36.117406 47.127922 26.858281 38.169922 21.488281 C 33.907448 18.931871 29.185543 17.753815 25.035156 18.09375 A 3.5 3.5 0 0 0 22.5 17 z M 9.1601562 23.324219 C 2.0791563 28.795219 -0.95795312 36.799406 2.2480469 42.566406 C 3.5910469 44.982406 5.8914375 46.685234 8.8984375 47.490234 C 10.169438 47.830234 11.527453 47.996094 12.939453 47.996094 C 16.739453 47.996094 20.910031 46.789672 24.707031 44.513672 C 28.954867 41.96696 32.09575 38.543722 33.876953 34.962891 C 35.628054 34.772138 37 33.301038 37 31.5 C 37 29.57 35.43 28 33.5 28 C 31.57 28 30 29.57 30 31.5 C 30 32.040225 30.132082 32.546629 30.351562 33.003906 C 28.907628 35.978686 26.213448 38.945387 22.650391 41.082031 C 18.354391 43.658031 13.599641 44.609953 9.9316406 43.626953 C 7.9956406 43.108953 6.5481406 42.069047 5.7441406 40.623047 C 3.8101406 37.143047 5.7462969 31.923469 10.029297 27.855469 C 9.6182969 26.415469 9.3241562 24.899219 9.1601562 23.324219 z" />
+            <path d="M24,9.604c-6.4,0 -10.4,3.199 -12,9.597c2.4,-3.199 5.2,-4.398 8.4,-3.599c1.826,0.456 3.131,1.781 4.576,3.247c2.352,2.387 5.075,5.151 11.024,5.151c6.4,0 10.4,-3.199 12,-9.598c-2.4,3.199 -5.2,4.399 -8.4,3.6c-1.825,-0.456 -3.13,-1.781 -4.575,-3.247c-2.353,-2.388 -5.077,-5.151 -11.025,-5.151zM12,24c-6.4,0 -10.4,3.199 -12,9.598c2.4,-3.199 5.2,-4.399 8.4,-3.599c1.825,0.457 3.13,1.781 4.575,3.246c2.353,2.388 5.077,5.152 11.025,5.152c6.4,0 10.4,-3.199 12,-9.598c-2.4,3.199 -5.2,4.399 -8.4,3.599c-1.826,-0.456 -3.131,-1.781 -4.576,-3.246c-2.352,-2.388 -5.075,-5.152 -11.024,-5.152z"></path>
           </svg>
-          <p className="text-2xl font-light" style={{color: textColor}}>Redux</p>
-        </div>
-        <div className="flex items-center gap-x-5">
-          <svg
-            className={`cursor-pointer ${theme === "light" ? "fill-[#212121]" : "fill-[#f8f8f8]"} hover:fill-[#0079F2] transition duration-200 ease-in-out`}
-            width="50px"
-            height="50px">
-            <path d="M1,5l6,4v20l-6,-4z"></path>
-            <path d="M47,20l-6,4v13l6,-4z"></path>
-            <path d="M47,6l-6,4v7l6,-4z"></path>
-            <path d="M35,5l-6,4v20l6,-4z"></path>
-            <path d="M1,12l17,11v-7l-17,-11z"></path>
-            <path d="M35,12l-17,11v-7l17,-11z"></path>
-            <path d="M35,26l-17,11v-7l17,-11z"></path>
-            <path d="M47,34l-17,11v-7l17,-11z"></path>
-            <path d="M30,37.765l-12,-7.765v7l12,7.765z"></path>
-          </svg>
-          <p className="text-2xl font-light" style={{color: textColor}}>Material UI</p>
+          <p className="text-2xl font-medium" style={{color: textColor}}>Tailwind CSS Projects</p>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Skills;
+export default Projects

@@ -19,12 +19,12 @@ const Navbar = ({ setTheme}) => {
           className="w-20"
           alt="logo"></img>
       )}
-      <ul className="flex gap-x-6">
+      <ul className="flex gap-x-6 items-center">
         <li className = "cursor-pointer" style={{color: textColor}}>HOME</li>
         <li className = "cursor-pointer" style={{color: textColor}}>PROJECTS</li>
         <li className = "cursor-pointer" style={{color: textColor}}>BLOG</li>
         <li className = "cursor-pointer" style={{color: textColor}}>CONTACT ME</li>
-        <li className = "cursor-pointer" style={{color: textColor}} onClick={() => setTheme(theme === "light" ? "dark" : "light")}>Change Theme</li>
+        <button className = "cursor-pointer py-2 px-6 rounded-lg" style={{color: textColor, border: `1px solid ${textColor}`}} onClick={() => setTheme(theme === "light" ? "dark" : "light")}>{theme === "light" ? "dark".toUpperCase() : "light".toUpperCase()} Mode</button>
       </ul>
     </div>
   );

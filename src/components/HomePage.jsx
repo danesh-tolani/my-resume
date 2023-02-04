@@ -23,7 +23,7 @@ const HomePage = () => {
             l'm <span className="font-bold"> Danesh Tolani </span>
           </h1>
           <p className="text-4xl"><Typewriter className="text-4xl"
-            onInit={(typewriter) => {typewriter.typeString('front-end developer')
+            onInit={(typewriter) => {typewriter.typeString('a front-end developer')
                 .pauseFor(2500)
                 .deleteAll()
                 .start()}}
