@@ -20,11 +20,11 @@ const Navbar = ({ setTheme}) => {
           alt="logo"></img>
       )}
       <ul className="flex gap-x-6">
-        <li style={{color: textColor}}>HOME</li>
-        <li style={{color: textColor}}>PROJECTS</li>
-        <li style={{color: textColor}}>BLOG</li>
-        <li style={{color: textColor}}>CONTACT ME</li>
-        <li style={{color: textColor}} onClick={() => setTheme(theme === "light" ? "dark" : "light")}>Change Theme</li>
+        <li className = "cursor-pointer" style={{color: textColor}}>HOME</li>
+        <li className = "cursor-pointer" style={{color: textColor}}>PROJECTS</li>
+        <li className = "cursor-pointer" style={{color: textColor}}>BLOG</li>
+        <li className = "cursor-pointer" style={{color: textColor}}>CONTACT ME</li>
+        <li className = "cursor-pointer" style={{color: textColor}} onClick={() => setTheme(theme === "light" ? "dark" : "light")}>Change Theme</li>
       </ul>
     </div>
   );

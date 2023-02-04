@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Experience from "./components/Experience";
 import HomePage from "./components/HomePage";
 import Navbar from "./components/Navbar";
 import Skills from "./components/Skills";
@@ -16,6 +17,7 @@ function App() {
         <Navbar setTheme={setTheme} theme={theme}/>
         <HomePage />
         <Skills />
+        <Experience/>
       </div>
     </ThemeContext.Provider>
   );

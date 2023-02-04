@@ -6,7 +6,7 @@ const Skills = () => {
   const textColor = theme === "light" ? "#212121" : "#f8f8f8";
 
   return (
-    <div className="mt-20">
+    <div className="py-20 border border-red-400">
       <h2 className="h2 text-4xl font-medium mb-10" style={{color: textColor}}>Skills</h2>
       <div className="grid grid-cols-3 gap-y-10">
         <div className="flex items-center gap-x-5">
