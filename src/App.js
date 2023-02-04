@@ -13,7 +13,7 @@ function App() {
   return (
     <ThemeContext.Provider value={theme}>
       <div
-        className="App font-[rubik] px-24"
+        className="App font-[rubik] px-4 lg:px-24"
         style={{ backgroundColor: theme == "light" ? "#f8f8f8" : "#212121" }}>
         <Navbar setTheme={setTheme} theme={theme}/>
         <HomePage />

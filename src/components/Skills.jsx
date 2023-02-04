@@ -6,9 +6,9 @@ const Skills = () => {
   const textColor = theme === "light" ? "#212121" : "#f8f8f8";
 
   return (
-    <div className="py-20 border border-red-400">
+    <div className="py-20">
       <h2 className="h2 text-4xl font-medium mb-10" style={{color: textColor}}>Skills</h2>
-      <div className="grid grid-cols-3 gap-y-10 transition duration-700 ease-in-out">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-y-10 transition duration-700 ease-in-out">
         <div className="flex items-center gap-x-5">
           <svg
             className={`cursor-pointer ${theme === "light" ? "fill-[#212121]" : "fill-[#f8f8f8]"} hover:fill-[#ff5722] transition duration-200 ease-in-out`}

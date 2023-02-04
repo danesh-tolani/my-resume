@@ -5,7 +5,6 @@ import Typewriter from 'typewriter-effect';
 
 const HomePage = () => {
   const theme = useContext(ThemeContext);
-  // console.log(theme)
 
   const typeWriterOptions={
     autoStart: true,
@@ -14,15 +13,14 @@ const HomePage = () => {
   }
 
   const logoColor = theme === "light" ? "#212121" : "#f8f8f8";
-  console.log("logoColor:",logoColor)
   return (
-    <div className=" border border-red-500 py-10">
-      <div className="top-portion flex justify-between py-5 items-center">
+    <div className="sm:py-0 lg:py-10 flex lg:block flex-col items-center">
+      <div className="top-portion flex flex-col lg:flex-row  lg:justify-between lg:py-5 items-center ">
         <div style={{color: logoColor}}> 
-          <h1 className="text-6xl py-4">
+          <h1 className="text-4xl lg:text-6xl py-4">
             l'm <span className="font-bold"> Danesh Tolani </span>
           </h1>
-          <p className="text-4xl"><Typewriter className="text-4xl"
+          <p className="text-2xl lg:text-4xl"><Typewriter className="text-4xl"
             onInit={(typewriter) => {typewriter.typeString('a front-end developer')
                 .pauseFor(2500)
                 .deleteAll()
@@ -32,7 +30,7 @@ const HomePage = () => {
           
         </div>
         <img
-          className="w-80 rounded-xl"
+          className="w-80 rounded-xl pt-10 lg:pt-0"
           src="./modified.jpg"
           alt="profile_image"
         />
