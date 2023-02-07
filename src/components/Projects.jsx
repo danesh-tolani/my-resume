@@ -1,25 +1,28 @@
 import React, { useContext, useState } from "react";
 import { ThemeContext } from "../context";
 import { projects } from "../projects";
-import ProjectCard from "../components/ProjectCard"
+import ProjectCard from "../components/ProjectCard";
 
 const Projects = () => {
-
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
   const [accordian, setAccordian] = useState(1);
   const theme = useContext(ThemeContext);
   const textColor = theme === "light" ? "#212121" : "#f8f8f8";
-  console.log(projects[0].react)
 
   return (
-    <div className="py-20 border border-red-400" style={{ color: textColor }}>
+    <div
+      className="py-20  "
+      style={{ color: textColor }}>
       <h2 className="h2 text-4xl font-medium mb-10">Projects</h2>
-      <div className="flex flex-col gap-y-5">
+      <div className="flex flex-col">
         {/* React Projects */}
         <div>
-          <div className="flex items-center gap-x-5 border border-red-700" onClick={() => {setShow(show && accordian === 1 ? false : true)
-            setAccordian(1);
-          }}>
+          <div
+            className="flex items-center gap-x-5  p-2"
+            onClick={() => {
+              setShow(show && accordian === 1 ? false : true);
+              setAccordian(1);
+            }}>
             <svg
               className={`cursor-pointer ${theme === "light" ? "fill-[#212121]" : "fill-[#f8f8f8]"} hover:fill-[#5CCFEE] transition duration-200 ease-in-out`}
               width="50px"
@@ -30,23 +33,54 @@ const Projects = () => {
                 fillRule="evenodd"
               />
             </svg>
-            <p className="text-2xl font-medium" style={{ color: textColor }}>React Projects</p>
+            <p
+              className="text-2xl font-medium"
+              style={{ color: textColor }}>
+              React Projects
+            </p>
           </div>
           {/* projects */}
-          {show && accordian === 1 ? (projects[0]?.react.map((tech) => {
-            tech?.react.map((project) => {
-              return (
-                <ProjectCard/>
-              )
-            })
-          })) : ""}
+          <div className="flex flex-wrap  mx-[auto] justify-between p-3 gap-y-5 ">
+            {show && accordian === 1
+              ? projects[0]?.react.map((project) => {
+                  return <ProjectCard project={project} />;
+                })
+              : ""}
           </div>
         </div>
-
-        {/* Tailwind Projects */}
-   
       </div>
-  )
-}
 
-export default Projects
+      {/* Tailwind Projects */}
+      <div>
+        <div
+          className="flex items-center gap-x-5  p-2"
+          onClick={() => {
+            setShow(show && accordian === 2 ? false : true);
+            setAccordian(2);
+          }}>
+          <svg
+            className={`cursor-pointer ${theme === "light" ? "fill-[#212121]" : "fill-[#f8f8f8]"} hover:fill-[#5CCFEE] transition duration-200 ease-in-out`}
+            width="50px"
+            height="50px">
+            <path d="M24,9.604c-6.4,0 -10.4,3.199 -12,9.597c2.4,-3.199 5.2,-4.398 8.4,-3.599c1.826,0.456 3.131,1.781 4.576,3.247c2.352,2.387 5.075,5.151 11.024,5.151c6.4,0 10.4,-3.199 12,-9.598c-2.4,3.199 -5.2,4.399 -8.4,3.6c-1.825,-0.456 -3.13,-1.781 -4.575,-3.247c-2.353,-2.388 -5.077,-5.151 -11.025,-5.151zM12,24c-6.4,0 -10.4,3.199 -12,9.598c2.4,-3.199 5.2,-4.399 8.4,-3.599c1.825,0.457 3.13,1.781 4.575,3.246c2.353,2.388 5.077,5.152 11.025,5.152c6.4,0 10.4,-3.199 12,-9.598c-2.4,3.199 -5.2,4.399 -8.4,3.599c-1.826,-0.456 -3.131,-1.781 -4.576,-3.246c-2.352,-2.388 -5.075,-5.152 -11.024,-5.152z"></path>
+          </svg>
+          <p
+            className="text-2xl font-medium"
+            style={{ color: textColor }}>
+            Tailwind Projects
+          </p>
+        </div>
+        {/* projects */}
+        <div className="flex flex-wrap  mx-[auto] justify-between p-3 gap-y-5 my-5">
+          {show && accordian === 2
+            ? projects[0]?.tailwind.map((project) => {
+                return <ProjectCard project={project} />;
+              })
+            : ""}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Projects;
