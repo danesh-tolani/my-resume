@@ -8,7 +8,7 @@ const ProjectCard = ({ project }) => {
 
   return (
     <div
-      className=" w-[100%] lg:w-[48%] rounded lg:rounded-2xl p-1 lg:p-3 border"
+      className=" w-[100%] lg:w-[48%] rounded  p-3 border"
       style={{ border: `2px solid ${theme}` }}>
       <div className="flex flex-col justify-between h-[100%]">
         <a
@@ -18,12 +18,12 @@ const ProjectCard = ({ project }) => {
           <img
             src={project?.image}
             alt="project"
-            className="h-[90%] w-[100%] object-fill rounded lg:rounded-2xl"
+            className="h-[90%] w-[100%] object-fill rounded "
           />
         </a>
         <div className="flex flex-col gap-y-3">
-          <h3 className="font-semibold text-2xl">{project?.title}</h3>
-          <p className="w-[90%]">{project.description}</p>
+          <h3 className="font-thin lg:font-medium text-2xl cursor-pointer">{project?.title}</h3>
+          <p className="font-thin text-sm lg:text-base w-[90%]">{project.description}</p>
         </div>
         <div className="flex w-[100%] gap-x-5 py-2">
           <a
