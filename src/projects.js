@@ -36,6 +36,28 @@ export var projects = [
         title: "Shopify Clone",
         github: "https://github.com/danesh-tolani/shopify-responsive",
         liveProject: "https://shopify-responsive.netlify.app/",
+        description: "Shopify Clone built using Tailwind CSS. This clone is mobile responsive as well",
+        image: "https://res.cloudinary.com/dhxg6ou2x/image/upload/v1675586149/projects/Shopify_veibvx.jpg",
+        tools: ["HTML", "Tailwind CSS"],
+        hosted: "Netlify"
+      },
+      {
+        title: "Rode Clone",
+        github: "https://github.com/danesh-tolani/rode-responsive",
+        liveProject: "https://rode-responsive.netlify.app/",
+        description: "Rode Clone built using Tailwind CSS. This clone is mobile responsive as well",
+        image: "https://res.cloudinary.com/dhxg6ou2x/image/upload/v1675586480/projects/Rode_tj9gs4.jpg",
+        tools: ["HTML", "Tailwind CSS"],
+        hosted: "Netlify"
+      },
+      {
+        title: "Paytm Clone",
+        github: "https://github.com/danesh-tolani/paytm-responsive",
+        liveProject: "https://fintech-app-mobile-responsive.netlify.app/",
+        description: "Paytm Clone built using Tailwind CSS. This clone is mobile responsive as well",
+        image: "https://res.cloudinary.com/dhxg6ou2x/image/upload/v1675586480/projects/paytm_jkuy9n.jpg",
+        tools: ["HTML", "Tailwind CSS"],
+        hosted: "Netlify"
       },
     ],
   },

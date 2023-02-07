@@ -7,7 +7,7 @@ import Skills from "./components/Skills";
 import { ThemeContext } from "./context";
 
 function App() {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
   
 
   return (
