@@ -4,7 +4,7 @@ import { projects } from "../projects";
 import ProjectCard from "../components/ProjectCard";
 
 const Projects = () => {
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
   const [accordian, setAccordian] = useState(1);
   const theme = useContext(ThemeContext);
   const textColor = theme === "light" ? "#212121" : "#f8f8f8";
