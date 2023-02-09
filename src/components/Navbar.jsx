@@ -1,10 +1,9 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { ThemeContext } from "../context";
 
 const Navbar = ({ setTheme }) => {
   const theme = useContext(ThemeContext);
   const textColor = theme === "light" ? "#212121" : "#f8f8f8";
-  // console.log(theme)
 
   return (
     <div className="flex flex-col lg:flex-row  justify-between items-center py-5 ">
