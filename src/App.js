@@ -19,11 +19,11 @@ function App() {
           setTheme={setTheme}
           theme={theme}
         />
-        <HomePage />
+        {/* <HomePage />
         <Skills />
         <Experience />
         <Projects />
-        <ContactForm />
+        <ContactForm /> */}
       </div>
     </ThemeContext.Provider>
   );
