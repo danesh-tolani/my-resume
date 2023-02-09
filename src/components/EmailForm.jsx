@@ -13,7 +13,8 @@ const EmailForm = () => {
   const sendEmail = (e) => {
     e.preventDefault();
     if (form.current[0].value !== "" && form.current[1].value !== "" && form.current[2].value !== "") {
-      emailjs.sendForm("service_wjfuokr", "template_l78aegk", form.current, "3ygo2QGBKXpK2heLR").then(
+      // emailjs.sendForm("service_wjfuokr", "template_l78aegk", form.current, "3ygo2QGBKXpK2heLR").then(
+      emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_USER_KEY).then(
         (result) => {
           if (result.status === 200) {
             setShow(true);
