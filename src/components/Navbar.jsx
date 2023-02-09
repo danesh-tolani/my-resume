@@ -59,7 +59,7 @@ const Navbar = ({ setTheme }) => {
               
         </li>
         <li
-          className="cursor-pointer text-xs lg:text-lg"
+          className="cursor-pointer text-xs lg:text-lg text-center"
           style={{ color: textColor }}>
             <Link activeClass="active" smooth={true}  to="contactMe">
 
@@ -67,7 +67,7 @@ const Navbar = ({ setTheme }) => {
             </Link>
         </li>
         <button
-          className="cursor-pointer text-xs lg:text-lg py-1 lg:py-2 px-3 lg:px-6 rounded-lg"
+          className="cursor-pointer text-xs lg:text-lg py-1 lg:py-2 px-2 lg:px-4 rounded-lg"
           style={{ color: textColor, border: `1px solid ${textColor}` }}
           onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
           {theme === "light" ? "dark".toUpperCase() : "light".toUpperCase()} Mode

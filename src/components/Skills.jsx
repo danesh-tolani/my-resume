@@ -7,7 +7,12 @@ const Skills = () => {
 
   return (
     <div className="py-20">
-      <h2 className="h2 text-4xl font-medium mb-10" style={{color: textColor}}>Skills</h2>
+      <div className="flex justify-between">
+        <h2 className="h2 text-4xl font-medium mb-10" style={{color: textColor}}>Skills</h2>
+        <a href="https://drive.google.com/file/d/1W2ELW7TkNElj6bA1A07xgWMuQgv3dQ3i/view?usp=sharing" target="_blank">
+        <h2 className={`h2 text-sm lg:text-2xl font-medium mb-10 border rounded-md px-2 py-1`} style={{color: textColor, border: `1px solid ${textColor}`}}>Download Resume</h2>
+          </a>
+      </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-y-10 transition duration-700 ease-in-out">
         <div className="flex items-center gap-x-5">
           <svg

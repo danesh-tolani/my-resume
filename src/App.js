@@ -19,11 +19,6 @@ function App() {
           setTheme={setTheme}
           theme={theme}
         />
-        {/* <HomePage />
-        <Skills />
-        <Experience />
-        <Projects />
-        <ContactForm /> */}
       </div>
     </ThemeContext.Provider>
   );
