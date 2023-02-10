@@ -4,6 +4,7 @@ import { ThemeContext } from "../context";
 
 const EmailForm = () => {
   const form = useRef();
+  const example = useRef(null);
   const theme = useContext(ThemeContext);
   const textColor = theme === "light" ? "#f8f8f8" : "#212121";
   const submitButtonColor = theme === "light" ? "#212121" : "#f8f8f8";
@@ -13,7 +14,6 @@ const EmailForm = () => {
   const sendEmail = (e) => {
     e.preventDefault();
     if (form.current[0].value !== "" && form.current[1].value !== "" && form.current[2].value !== "") {
-      // emailjs.sendForm("service_wjfuokr", "template_l78aegk", form.current, "3ygo2QGBKXpK2heLR").then(
       emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_USER_KEY).then(
         (result) => {
           if (result.status === 200) {
@@ -92,6 +92,10 @@ const EmailForm = () => {
             style={{ backgroundColor: textColor }}
           />
         </div>
+        <input
+          type="text"
+          ref={example}
+        />
 
         <button
           className="cursor-pointer text-xs lg:text-lg py-1 lg:py-2 px-3 lg:px-6 rounded-lg w-[100%]"
