@@ -39,7 +39,7 @@ export var projects = [
         description: "Shopify Clone built using Tailwind CSS. This clone is mobile responsive as well",
         image: "https://res.cloudinary.com/dhxg6ou2x/image/upload/v1675586149/projects/Shopify_veibvx.jpg",
         tools: ["HTML", "Tailwind CSS"],
-        hosted: "Netlify"
+        hosted: "Netlify",
       },
       {
         title: "Rode Clone",
@@ -48,7 +48,7 @@ export var projects = [
         description: "Rode Clone built using Tailwind CSS. This clone is mobile responsive as well",
         image: "https://res.cloudinary.com/dhxg6ou2x/image/upload/v1675586480/projects/Rode_tj9gs4.jpg",
         tools: ["HTML", "Tailwind CSS"],
-        hosted: "Netlify"
+        hosted: "Netlify",
       },
       {
         title: "Paytm Clone",
@@ -57,7 +57,27 @@ export var projects = [
         description: "Paytm Clone built using Tailwind CSS. This clone is mobile responsive as well",
         image: "https://res.cloudinary.com/dhxg6ou2x/image/upload/v1675586480/projects/paytm_jkuy9n.jpg",
         tools: ["HTML", "Tailwind CSS"],
-        hosted: "Netlify"
+        hosted: "Netlify",
+      },
+    ],
+    typescript: [
+      {
+        title: "Gym Website",
+        github: "https://github.com/danesh-tolani/typescript-project",
+        liveProject: "https://typescript-project-sand.vercel.app/",
+        description: "Gym Website built using Typescript and Tailwind CSS.",
+        image: "https://res.cloudinary.com/dhxg6ou2x/image/upload/v1680447707/projects/evo_gj5jna.jpg",
+        tools: ["Typescript", "Tailwind CSS"],
+        hosted: "Vercel",
+      },
+      {
+        title: "E-commerce Website",
+        github: "https://github.com/danesh-tolani/ecomm-typescript",
+        liveProject: "https://ecomm-typescript.vercel.app/",
+        description: "Ecommerce Website built using Typescript and Tailwind CSS with Redux integration and firebase authentication and Stripe for payment integration",
+        image: "https://res.cloudinary.com/dhxg6ou2x/image/upload/v1680447707/projects/Screenshot_2023-04-02_202023_hmlenl.jpg",
+        tools: ["Typescript", "Tailwind CSS", "Redux", "Firebase"],
+        hosted: "Vercel",
       },
     ],
   },

@@ -5,7 +5,7 @@ import HomePage from "./components/HomePage";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
-import UnControlled from "./components/Uncontroled";
+// import UnControlled from "./components/Uncontroled";
 import { ThemeContext } from "./context";
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
           setTheme={setTheme}
           theme={theme}
         />
-        <UnControlled />
+        {/* <UnControlled /> */}
       </div>
     </ThemeContext.Provider>
   );
