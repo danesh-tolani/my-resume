@@ -92,10 +92,6 @@ const EmailForm = () => {
             style={{ backgroundColor: textColor }}
           />
         </div>
-        <input
-          type="text"
-          ref={example}
-        />
 
         <button
           className="cursor-pointer text-xs lg:text-lg py-1 lg:py-2 px-3 lg:px-6 rounded-lg w-[100%]"
